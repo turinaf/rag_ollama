@@ -1,0 +1,9 @@
+langchain                              
+langchain-chroma                         
+langchain-community                    
+langchain-core                           
+langchain-ollama
+langchain-text-splitters 
+flask
+bs4
+requests

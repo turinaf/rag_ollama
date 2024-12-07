@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  ollama_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "11434:11434"  # Ollama's default port
+      - "8080:8080"    # Flask API
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+      - OLLAMA_PORT=11434
+      - FLASK_PORT=8080
+    volumes:
+      - ./data:/app/data  # If you need to persist data
