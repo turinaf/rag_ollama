@@ -6,7 +6,6 @@ from langchain_chroma import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.schema.document import Document
 from langchain_community.document_loaders import WebBaseLoader
-from langchain_ollama import OllamaLLM
 import bs4
 
 CHROMA_PATH = "chroma"
@@ -60,8 +59,8 @@ def store_vectors(chunks: list[Document]):
     
 def calculate_chunk_ids(chunks):
 
-    # This will create IDs like "data/monopoly.pdf:6:2"
-    # Page Source : Page Number : Chunk Index
+    # This will create IDs like "data/data_source:6:2"
+    # Data Source : Page Number : Chunk Index
 
     last_page_id = None
     current_chunk_index = 0

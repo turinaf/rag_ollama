@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-from query import query  # Assuming your existing code is in query.py
+from query import query  
 
 app = Flask(__name__)
 @app.route('/')
@@ -17,4 +17,4 @@ def query_api():
     return jsonify({'response': response})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8080, debug=True)
